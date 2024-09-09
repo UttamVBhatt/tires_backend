@@ -11,7 +11,7 @@ const {
 } = require("../controllers/userController");
 
 const router = express.Router();
-
+// Just a comment
 router.post("/login", logIn);
 router.post("/signup", signUp);
 router.get("/logout", logOut);
