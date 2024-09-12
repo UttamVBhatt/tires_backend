@@ -81,6 +81,14 @@ const userSchema = new mongoose.Schema({
       message: "Both passwords are not same, please check your both passwords",
     },
   },
+  role: {
+    type: String,
+    enum: {
+      values: ["User", "Shop Admin", "Super Admin"],
+      message: "Please choose either of User, Shop Admin or Super Admin",
+    },
+    default: "Userd",
+  },
   orders: [{ images: Array, price: String, profile: String, name: String }],
   cart: [{ type: mongoose.Schema.ObjectId, ref: "Orders" }],
   activities: [{ type: mongoose.Schema.ObjectId, ref: "Activities" }],
