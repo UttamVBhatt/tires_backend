@@ -30,10 +30,11 @@ const adminSchema = new mongoose.Schema({
   role: {
     type: String,
     enum: {
-      values: ["shop_admin", "super_admin"],
-      message: "Choose a role between shop_admin or super_admin",
+      values: ["Shop Admin", "Super Admin"],
+      message: "Choose a role between Shop Admin or Super Admin",
     },
     required: [true, "Please choose a role"],
+    default: "Shop Admin",
   },
   created_at: { type: Date, default: Date.now },
 });
