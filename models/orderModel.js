@@ -17,7 +17,7 @@ const orderSchema = new mongoose.Schema({
         "shipped",
         "delivered",
         "cancelled",
-        "approved",
+        "done",
       ],
       message:
         "Order's status must be either pending, confirmed, shipped, delivered or cancelled",
