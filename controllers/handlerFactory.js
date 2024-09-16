@@ -174,7 +174,7 @@ exports.updateOne = (Model) =>
     });
 
     // If order's status === "delivered", than we'll create a transaction with the given information
-    if (doc.status === "delivered") {
+    if (doc.status === "approved") {
       const user = await User.findById(doc.users);
 
       await Transactions.create({

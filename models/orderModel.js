@@ -11,7 +11,14 @@ const orderSchema = new mongoose.Schema({
   status: {
     type: String,
     enum: {
-      values: ["pending", "confirmed", "shipped", "delivered", "cancelled"],
+      values: [
+        "pending",
+        "confirmed",
+        "shipped",
+        "delivered",
+        "cancelled",
+        "approved",
+      ],
       message:
         "Order's status must be either pending, confirmed, shipped, delivered or cancelled",
     },
